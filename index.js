@@ -14,11 +14,11 @@ for (var i = 0; i < dropdown.options.length; i++) {
 setTimeout(function () {
     // Counter to track the number of times the "Next" button has been clicked
     var clickCounter = 0;
-
+    let aud = 1;
     // Function to check for green days and click the "Next" button up to two times
     function checkAndClickNext() {
         // Check if the maximum number of clicks (10 times) has been reached
-        if (clickCounter < 10) {
+        if (clickCounter < 20) {
             // Get a reference to the calendar container
             var calendarContainer = document.getElementById("ui-datepicker-div");
 
@@ -28,10 +28,13 @@ setTimeout(function () {
                 var greenDays = calendarContainer.querySelectorAll(".greenday");
 
                 // Check if there are any elements with the class "greenday"
-                if (greenDays.length > 0) {
-                    console.log("There are green days in the calendar.");
-                    let audio = new Audio('https://samplelib.com/lib/preview/mp3/sample-9s.mp3');
-                    audio.play();
+                if (greenDays.length > 0 && aud < 2) {
+                
+                        console.log("There are green days in the calendar.");
+                        let audio = new Audio('https://samplelib.com/lib/preview/mp3/sample-9s.mp3');
+                        audio.play();
+                        aud++
+
                 } else {
                     console.log("There are no green days in the calendar.");
 
@@ -48,7 +51,7 @@ setTimeout(function () {
                         clickCounter++;
 
                         // Check if it's the last click, then hide the datepicker
-                        if (clickCounter === 10) {
+                        if (clickCounter === 20) {
                             $('#datepicker').datepicker('hide');
                             //console.log("Hiding the datepicker.");
 
