@@ -33,7 +33,7 @@ setTimeout(function () {
                     audio.play();
                     clearInterval(intervalId);
                 } else {
-                    console.log("There are no green days in the calendar.");
+                    //console.log("There are no green days in the calendar.");
 
                     // Get a reference to the "Next" button
                     var nextButton = document.querySelector(".ui-datepicker-next");
@@ -68,7 +68,7 @@ setTimeout(function () {
                 console.log("Calendar container not found.");
             }
         } else {
-            console.log("Maximum number of clicks reached.");
+            //console.log("Maximum number of clicks reached.");
             clearInterval(intervalId); // Stop the interval when maximum clicks are reached
         }
     }
