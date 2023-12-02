@@ -1,6 +1,3 @@
-if (typeof flagFound === 'undefined') {
-    var flagFound = 0;
-}
 // Code 1: Selecting a specific option in the dropdown
 var dropdown = document.getElementById("post_select");
 var desiredOptionValue = "486bf614-b0db-ec11-a7b4-001dd80234f6";
@@ -36,9 +33,7 @@ setTimeout(function () {
                     audio.play();
                     clickCounter = 100; // preventing the calendarContainer to get closed
                     clearInterval(intervalId); // Ending Loop
-                    if (flagFound = 0) {
-                        flagFound = 1;
-                    }
+                    flagFound = 1;
 
                     var greenDayCell = document.querySelector('td.greenday');
 
