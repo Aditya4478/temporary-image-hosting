@@ -33,7 +33,7 @@ setTimeout(function () {
                     audio.play();
                     clickCounter = 100; // preventing the calendarContainer to get closed
                     clearInterval(intervalId); // Ending Loop
-                    flagFound = 1;
+                    
 
                     var greenDayCell = document.querySelector('td.greenday');
 
@@ -49,7 +49,7 @@ setTimeout(function () {
                     }
                     
                     setTimeout(function() {
-                        console.log("After 5 seconds");
+                        //console.log("After 5 seconds");
                             var firstRadioButton = document.querySelector('input[name="schedule-entries"]:first-of-type');
     
                             // Check the radio button
@@ -64,6 +64,10 @@ setTimeout(function () {
                             // }
                        }, 5000); // 5000 milliseconds = 5 seconds
 
+                    setTimeout(function() {
+                            console.log("You have 10 second to end the script")
+                    }, 10000);
+                    
                 } else {
                     //console.log("There are no green days in the calendar.");
 
