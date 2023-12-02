@@ -62,11 +62,11 @@ setTimeout(function () {
                                 firstRadioButton.click();
                             }
                             
-                            var submitButton = document.getElementById('submitbtn');
-                            // Simulate a click on the submit button
-                            if (submitButton) {
-                                submitButton.click();
-                            }
+                            // var submitButton = document.getElementById('submitbtn');
+                            // // Simulate a click on the submit button
+                            // if (submitButton) {
+                            //     submitButton.click();
+                            // }
                        }, 5000); // 5000 milliseconds = 5 seconds
 
                 } else {
