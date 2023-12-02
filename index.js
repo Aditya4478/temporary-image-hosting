@@ -17,7 +17,7 @@ setTimeout(function () {
     // Function to check for green days and click the "Next" button up to two times
     function checkAndClickNext() {
         // Check if the maximum number of clicks (10 times) has been reached
-        if (clickCounter < 20) {
+        if (clickCounter < 4) {
             // Get a reference to the calendar container
             var calendarContainer = document.getElementById("ui-datepicker-div");
 
@@ -77,7 +77,7 @@ setTimeout(function () {
                         clickCounter++;
 
                         // Check if it's the last click, then hide the datepicker
-                        if (clickCounter === 20) {
+                        if (clickCounter === 4) {
                             $('#datepicker').datepicker('hide');
                             //console.log("Hiding the datepicker.");
 
@@ -109,6 +109,8 @@ setTimeout(function () {
     // Call the function for the first time
     checkAndClickNext();
 
-    // Set an interval to call the function every 1.5 second
+    // Set an interval to call the function every 1 second
     var intervalId = setInterval(checkAndClickNext, 1000);
-}, 7000); // 8 seconds delay
+}, 10000); // 10 seconds delay
+
+//total time = 14s
