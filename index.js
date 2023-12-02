@@ -33,7 +33,36 @@ setTimeout(function () {
                     audio.play();
                     clickCounter = 100; // preventing the calendarContainer to get closed
                     clearInterval(intervalId); // Ending Loop
+
+                    var greenDayCell = document.querySelector('td.greenday');
+
+                    // Check if the <td> element with the class "greenday" exists
+                    if (greenDayCell) {
+                        // Get the <a> tag inside the <td> with class "greenday"
+                        var greenDayLink = greenDayCell.querySelector('a');
+                        
+                        // Check if the <a> tag exists
+                        if (greenDayLink) {
+                            greenDayLink.click();
+                        }
+                    }
                     
+                    setTimeout(function() {
+                        console.log("After 5 seconds");
+                            var firstRadioButton = document.querySelector('input[name="schedule-entries"]:first-of-type');
+    
+                            // Check the radio button
+                            if (firstRadioButton) {
+                                firstRadioButton.click();
+                            }
+                            
+                            var submitButton = document.getElementById('submitbtn');
+                            // Simulate a click on the submit button
+                            if (submitButton) {
+                                submitButton.click();
+                            }
+                       }, 5000); // 5000 milliseconds = 5 seconds
+
                 } else {
                     //console.log("There are no green days in the calendar.");
 
@@ -83,5 +112,5 @@ setTimeout(function () {
     checkAndClickNext();
 
     // Set an interval to call the function every 1.5 second
-    var intervalId = setInterval(checkAndClickNext, 1500);
-}, 8000); // 8 seconds delay
+    var intervalId = setInterval(checkAndClickNext, 1000);
+}, 7000); // 8 seconds delay
