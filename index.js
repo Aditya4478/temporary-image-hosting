@@ -31,7 +31,9 @@ setTimeout(function () {
                     console.log("There are green days in the calendar.");
                     let audio = new Audio('https://samplelib.com/lib/preview/mp3/sample-9s.mp3');
                     audio.play();
-                    clearInterval(intervalId);
+                    clickCounter = 100; // preventing the calendarContainer to get closed
+                    clearInterval(intervalId); // Ending Loop
+                    
                 } else {
                     //console.log("There are no green days in the calendar.");
 
@@ -60,6 +62,7 @@ setTimeout(function () {
                                 //console.log("Selected the first option in the dropdown.");
                             }
                         }
+                        
                     } else {
                         console.log("Next button not found.");
                     }
@@ -79,6 +82,6 @@ setTimeout(function () {
     // Call the function for the first time
     checkAndClickNext();
 
-    // Set an interval to call the function every 1 second
-    var intervalId = setInterval(checkAndClickNext, 1000);
-}, 10000); // 10 seconds delay
+    // Set an interval to call the function every 1.5 second
+    var intervalId = setInterval(checkAndClickNext, 1500);
+}, 8000); // 8 seconds delay
