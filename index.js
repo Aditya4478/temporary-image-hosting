@@ -62,11 +62,12 @@ setTimeout(function () {
                             // if (submitButton) {
                             //     submitButton.click();
                             // }
+                            setTimeout(function() {
+                                console.log("You have 10 second to end the script")
+                            }, 10000);
                        }, 5000); // 5000 milliseconds = 5 seconds
 
-                    setTimeout(function() {
-                            console.log("You have 10 second to end the script")
-                    }, 10000);
+                    
                     
                 } else {
                     //console.log("There are no green days in the calendar.");
