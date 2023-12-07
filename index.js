@@ -111,6 +111,6 @@ setTimeout(function () {
 
     // Set an interval to call the function every 1 second
     var intervalId = setInterval(checkAndClickNext, 1000);
-}, 4000); // 10 seconds delay
+}, 3000); // 10 seconds delay
 
 //total time = 7s
