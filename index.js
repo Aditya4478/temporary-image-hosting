@@ -17,7 +17,7 @@ setTimeout(function () {
     // Function to check for green days and click the "Next" button up to two times
     function checkAndClickNext() {
         // Check if the maximum number of clicks (10 times) has been reached
-        if (clickCounter < 2) {
+        if (clickCounter < 1) {
             // Get a reference to the calendar container
             var calendarContainer = document.getElementById("ui-datepicker-div");
 
@@ -77,7 +77,7 @@ setTimeout(function () {
                         clickCounter++;
 
                         // Check if it's the last click, then hide the datepicker
-                        if (clickCounter === 3 && greenDays.length < 0) {
+                        if (clickCounter === 1 && greenDays.length < 0) {
                             $('#datepicker').datepicker('hide');
                             //console.log("Hiding the datepicker.");
 
