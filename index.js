@@ -77,7 +77,7 @@ setTimeout(function () {
                         clickCounter++;
 
                         // Check if it's the last click, then hide the datepicker
-                        if (clickCounter === 1 && greenDays.length < 0) {
+                        if (clickCounter === 1 && document.getElementById("ui-datepicker-div").querySelectorAll(".greenday").length < 0) {
                             $('#datepicker').datepicker('hide');
                             //console.log("Hiding the datepicker.");
 
