@@ -104,7 +104,7 @@ setTimeout(function () {
     }
 
     // Show the datepicker after the 10 seconds gap
-    $('#datepicker').datepicker('show');
+    //$('#datepicker').datepicker('show');
 
     // Call the function for the first time
     checkAndClickNext();
