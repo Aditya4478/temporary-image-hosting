@@ -1,7 +1,7 @@
 // Code 1: Selecting a specific option in the dropdown
 var dropdown = document.getElementById("post_select");
-//var desiredOptionValue = "486bf614-b0db-ec11-a7b4-001dd80234f6"; //mumbai
-var desiredOptionValue = "466bf614-b0db-ec11-a7b4-001dd80234f6"; //Kolkata
+var desiredOptionValue = "486bf614-b0db-ec11-a7b4-001dd80234f6"; //mumbai
+//var desiredOptionValue = "466bf614-b0db-ec11-a7b4-001dd80234f6"; //Kolkata
 //var desiredOptionValue = "436bf614-b0db-ec11-a7b4-001dd80234f6"; //hyderabad
 
 for (var i = 0; i < dropdown.options.length; i++) {
