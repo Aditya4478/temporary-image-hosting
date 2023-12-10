@@ -47,21 +47,21 @@ setTimeout(function () {
                             greenDayLink.click();
                         }
                     }
-                    let mySub = setInterval(() => {
-                        var firstRadioButton = document.querySelector('input[name="schedule-entries"]:first-of-type');
-    
+                    setTimeout(function() {
+                        //console.log("After 5 seconds");
+                            var firstRadioButton = document.querySelector('input[name="schedule-entries"]:first-of-type');
+
                             // Check the radio button
                             if (firstRadioButton) {
                                 firstRadioButton.click();
                             }
-                            
+
                             var submitButton = document.getElementById('submitbtn');
-                            // Simulate a click on the submit button
+                            // // Simulate a click on the submit button
                             if (submitButton) {
                                  submitButton.click();
-                                clearInterval(mySub);
                             }
-                    }, 1000);
+                       }, 2000); // 5000 milliseconds = 5 seconds
                     
                 } else {
                     //console.log("There are no green days in the calendar.");
