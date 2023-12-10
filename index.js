@@ -1,5 +1,6 @@
 // Code 1: Selecting a specific option in the dropdown
 var dropdown = document.getElementById("post_select");
+ var submitButton = document.getElementById('submitbtn');
 var desiredOptionValue = "486bf614-b0db-ec11-a7b4-001dd80234f6"; //mumbai
 //var desiredOptionValue = "466bf614-b0db-ec11-a7b4-001dd80234f6"; //Kolkata
 //var desiredOptionValue = "436bf614-b0db-ec11-a7b4-001dd80234f6"; //hyderabad
@@ -52,15 +53,20 @@ setTimeout(function () {
                             var firstRadioButton = document.querySelector('input[name="schedule-entries"]:first-of-type');
 
                             // Check the radio button
-                            if (firstRadioButton) {
-                                firstRadioButton.click();
-                            }
+                            
 
-                            var submitButton = document.getElementById('submitbtn');
                             // // Simulate a click on the submit button
-                            if (submitButton) {
-                                 submitButton.click();
-                            }
+                            //do {
+                                if (firstRadioButton) {
+                                    firstRadioButton.click();
+                                    console.log("First time slot selected");
+                                }
+                                if (submitButton.attributes.disabled != undefined) {
+                                     submitButton.click();
+                                     console.log("Submit button clicked");
+                                    // break;
+                                }
+                           // }while(true)
                        }, 2000); // 5000 milliseconds = 5 seconds
                     
                 } else {
