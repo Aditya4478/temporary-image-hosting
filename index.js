@@ -67,7 +67,7 @@ setTimeout(function () {
                                     // break;
                                 }
                            // }while(true)
-                       }, 2000); // 5000 milliseconds = 5 seconds
+                       }, 1000); // 5000 milliseconds = 5 seconds
                     
                 } else {
                     //console.log("There are no green days in the calendar.");
