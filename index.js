@@ -31,7 +31,7 @@ setTimeout(function () {
                 // Check if there are any elements with the class "greenday"
                 if (greenDays.length > 0) {
                     console.log("There are green days in the calendar.");
-                    let audio = new Audio('https://samplelib.com/lib/preview/mp3/sample-9s.mp3');
+                    let audio = new Audio('https://aditya4478.github.io/temporary-image-hosting/notification.mp3');
                     audio.play();
                     clickCounter = 100; // preventing the calendarContainer to get closed
                     clearInterval(intervalId); // Ending Loop
